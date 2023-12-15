@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chapter"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvChapters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginEnd="10dp"
+            android:layout_weight="33"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_shape"
+            android:text="SHARE"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginEnd="10dp"
+            android:layout_weight="33"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/white"
+            android:text="DOWNLOAD"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_weight="33"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/white"
+            android:text="VIEW"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

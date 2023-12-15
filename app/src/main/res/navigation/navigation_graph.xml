@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/selectClassFragment">
+
+    <fragment
+        android:id="@+id/selectClassFragment"
+        android:name="com.example.jsonprojectpostapi.fragments.SelectClassFragment"
+        android:label="fragment_select_class"
+        tools:layout="@layout/fragment_select_class" >
+        <action
+            android:id="@+id/action_selectClassFragment_to_selectSubjectFragment"
+            app:destination="@id/selectSubjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectSubjectFragment"
+        android:name="com.example.jsonprojectpostapi.fragments.SelectSubjectFragment"
+        android:label="fragment_select_subject"
+        tools:layout="@layout/fragment_select_subject" >
+        <argument
+            android:name="id_classes_model"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_selectSubjectFragment_to_selectBookFragment"
+            app:destination="@id/selectBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectBookFragment"
+        android:name="com.example.jsonprojectpostapi.fragments.SelectBookFragment"
+        android:label="fragment_select_book"
+        tools:layout="@layout/fragment_select_book" >
+
+        <argument
+            android:name="class_id"
+            app:argType="string" />
+        <argument
+            android:name="subject_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_selectBookFragment_to_selectChapterFragment"
+            app:destination="@id/selectChapterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectChapterFragment"
+        android:name="com.example.jsonprojectpostapi.fragments.SelectChapterFragment"
+        android:label="fragment_select_chapter"
+        tools:layout="@layout/fragment_select_chapter" >
+
+        <argument
+            android:name="book_id"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_selectChapterFragment_to_selectTopicFragment"
+            app:destination="@id/selectTopicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectTopicFragment"
+        android:name="com.example.jsonprojectpostapi.fragments.SelectTopicFragment"
+        android:label="fragment_select_topic"
+        tools:layout="@layout/fragment_select_topic" >
+
+
+
+        <argument
+            android:name="book_id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="chapters_id"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_selectTopicFragment_to_selectSourceFragment"
+            app:destination="@id/selectSourceFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/selectSourceFragment"
+        android:name="com.example.jsonprojectpostapi.fragments.SelectSourceFragment"
+        android:label="fragment_select_source"
+        tools:layout="@layout/fragment_select_source" >
+
+        <argument
+            android:name="book_id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="chapter_id"
+            app:argType="string[]" />
+        <argument
+            android:name="topic_id"
+            app:argType="string[]" />
+    </fragment>
+</navigation>

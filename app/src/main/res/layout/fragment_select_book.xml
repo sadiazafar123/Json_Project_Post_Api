@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativelayout_book"
+    tools:context=".fragments.SelectBookFragment">
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/light_blue"
+        android:weightSum="100"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_weight="15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"/>
+        <TextView
+            android:layout_weight="75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Book"
+            android:textColor="@color/white" />
+        <ImageView
+            android:layout_weight="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_icon"
+            android:backgroundTint="@color/white"/>
+        <ImageView
+            android:layout_weight="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/linearlayout2"
+        android:layout_below="@id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="100">
+        <TextView
+            android:layout_weight = "52"
+            android:layout_width ="0dp"
+            android:layout_height = "wrap_content"
+            android:text = "Available Question :"
+            android:textColor= "@color/black"
+            android:layout_marginLeft="10dp"
+            android:textSize= "17dp"
+            android:textStyle= "bold" />
+        <TextView
+            android:id="@+id/tvTotalQuesBook"
+            android:layout_weight="30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize= "17dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_weight="18"
+            android:layout_width="0dp"
+            android:textSize= "17dp"
+            android:layout_height="wrap_content"
+            android:text="Q?"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+
+            />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/linearlayout2"
+        android:id="@+id/recyclerView_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/class_layout"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayout_Class"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/flower"/>
+        <TextView
+            android:id="@+id/tvClassTitle"
+            android:layout_marginLeft="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:hint="class title"/>
+        <TextView
+            android:id="@+id/tvTotalQuestion"
+            android:layout_below="@id/tvClassTitle"
+            android:layout_marginLeft="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="total question"/>
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_below="@id/tvClassTitle"
+            android:layout_marginLeft="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/purple_500"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SelectSourceFragment">
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/purple_500"
+        android:weightSum="100"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_weight="15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"/>
+        <TextView
+            android:layout_weight="75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Source"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_weight="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_icon"
+            android:backgroundTint="@color/white"/>
+        <ImageView
+            android:layout_weight="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/linearlayout2"
+        android:layout_below="@id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="100">
+        <TextView
+            android:layout_weight = "52"
+            android:layout_width ="0dp"
+            android:layout_height = "wrap_content"
+            android:text = "Available Question :"
+            android:textColor= "@color/black"
+            android:layout_marginLeft="10dp"
+            android:textSize= "17dp"
+            android:textStyle= "bold" />
+        <TextView
+            android:id="@+id/tvSourceTotal"
+            android:layout_weight="30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize= "17dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_weight="18"
+            android:layout_width="0dp"
+            android:textSize= "17dp"
+            android:layout_height="wrap_content"
+            android:text="Q?"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/linearlayout2"
+        android:id="@+id/recyclerView_source"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/chapters_layout"/>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="110dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/black_btn_shape"
+            android:layout_centerInParent="true"
+            android:text="NEXT"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
